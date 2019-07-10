@@ -58,6 +58,10 @@
 
     - name: Delete ec2 instances
       ec2_instance:
+        aws_access_key: "{{ aws_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
+        security_token: "{{ security_token }}"
+        region: "{{region}}"
         state: absent
         filters:
           instance-state-name: running
