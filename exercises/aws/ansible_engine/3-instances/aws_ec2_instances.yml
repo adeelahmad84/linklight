@@ -62,7 +62,6 @@
         aws_secret_key: "{{ aws_secret_key }}"
         security_token: "{{ security_token }}"
         region: "{{region}}"
+        instance_ids: "{{ ec2_instances.instance_ids }}"
         state: absent
-        filters:
-          instance-state-name: running
       when: teardown
