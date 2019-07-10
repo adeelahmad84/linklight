@@ -35,3 +35,13 @@
           - proto: all
             cidr_ip: 0.0.0.0/0
       when: not teardown
+
+    - name: Delete a security group
+      ec2_group:
+        aws_access_key: "{{ aws_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
+        security_token: "{{ security_token }}"
+        region: "{{ region }}"
+        name: "{{ security_group }}"
+        state: absent
+      when: teardown
