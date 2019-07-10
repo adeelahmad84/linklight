@@ -62,7 +62,8 @@
         aws_secret_key: "{{ aws_secret_key }}"
         security_token: "{{ security_token }}"
         region: "{{region}}"
-        instance_ids:
-          - i-0bbe2591a68a98225
+        filters:
+          instance-state-name: "running"
+          "tag:student": "{{student}}"
         state: absent
       when: teardown

@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   gather_facts: false
-  ignore_errors: true
+  ignore_errors: false
   vars:
     region: "eu-west-2"
     elb_name: "{{student}}-elb"
