@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    security_group: "{{ student }}_sg"
+    region: eu-west-2
+    teardown: false
+  vars_files:
+    - ../aws_keys.yml
