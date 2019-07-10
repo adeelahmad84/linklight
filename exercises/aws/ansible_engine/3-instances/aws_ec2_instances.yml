@@ -57,8 +57,8 @@
       register: ec2_instances
 
     - name: Delete ec2 instances
-        ec2_instance:
-          state: absent
-          filters:
-            instance-state-name: running
+      ec2_instance:
+        state: absent
+        filters:
+          instance-state-name: running
       when: teardown
