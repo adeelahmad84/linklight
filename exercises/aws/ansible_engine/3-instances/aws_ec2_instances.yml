@@ -62,6 +62,7 @@
         aws_secret_key: "{{ aws_secret_key }}"
         security_token: "{{ security_token }}"
         region: "{{region}}"
-        instance_ids: "{{ ec2_instances.instance_ids }}"
+        instance_ids:
+          - i-0bbe2591a68a98225
         state: absent
       when: teardown
